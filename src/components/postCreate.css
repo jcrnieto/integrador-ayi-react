@@ -1,0 +1,154 @@
+.container-post{
+    overflow: hidden;
+  }
+  
+  .danger {
+    border: red 1px solid;
+  }
+  
+  .p {
+    position: fixed;
+    top: 90px;
+    left: 10px;
+  }
+  
+  .form-post-create {
+    width: 100%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+  }
+  
+  .form-error-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+  }
+  
+  .form-row-buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    justify-content: center;
+    column-gap: 2rem;
+  }
+  
+  .form-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-column-label {
+    width: 30%;
+    font-family: Arial; 
+    font-size: 23px;
+    font-weight: bold;
+  }
+  
+  .form-column-input {
+    width: 70%;
+    max-width: calc(70vw - 70px) !important;
+    border-radius: 7px;
+    font-family: Arial;
+    resize:none;
+  }
+  
+  .form-column-error {
+    width: auto;
+    max-width: calc(70vw - 70px) !important;
+    color: rgba(255, 0, 0, 0.85);
+    font-style: italic;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 7px;
+  }
+  
+  .form-column-buttons {
+    display: flex;
+    flex-direction: column;
+    
+  
+  }
+  
+  .align-left {
+    text-align: left;
+  }
+  
+  .form-diet-included {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-diet-container {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      max-width: calc(90vw - 50px) !important;
+      margin-bottom: 1rem;
+      padding-left: 4rem;
+      padding-right: 4rem;
+      padding-bottom: 1rem;
+  }
+  
+  .form-diet-delete {
+       padding:1px 10px;
+       display: inline-block;
+       color: #000;
+       text-decoration: none;
+  }
+  
+  .botones-guardar {
+      box-shadow: 0px 10px 14px -7px #3dc21b;
+      background:linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+      background-color:#44c767;
+      border-radius:8px;
+      display:inline-block;
+      cursor:pointer;
+      color:#ffffff;
+      font-family:Arial;
+      font-size:16px;
+      font-weight:bold;
+      padding:13px 32px;
+      text-decoration:none;
+      text-shadow:0px 1px 0px #2f6627;
+  }
+  .botones-guardar:hover {
+      background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
+      background-color:#5cbf2a;
+  }
+  .botones-guardar:active {
+      position:relative;
+      top:1px;
+  }
+  
+  @media (max-width: 480px) {
+    .container-post{
+      background-color: rgb(222, 241, 213) ;
+      overflow: hidden;
+      height: 100vh;
+    }
+    .form-row-buttons {
+      width:88%;
+      margin-top: 150px;
+     
+    }
+  
+    .form-column-label {
+      font-size: 18px;
+    }
+  
+    .form-row {
+      margin-bottom: 25px;
+    }
+  }
