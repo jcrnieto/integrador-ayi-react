@@ -6,7 +6,7 @@ export function getRecipes(){
     try{
    
        var json = await axios.get("http://localhost:8080/Recipes/getAllRecipes");
-       console.log('actions', json.data)
+       //console.log('actions', json.data)
        return dispatch({
            type: 'GET_RECIPES',
            payload: json.data
@@ -58,7 +58,7 @@ export function getTitle(title){
     return async function(dispatch){
     try{
         var json = await axios.get("http://localhost:8080/Recipes/searchRecipesByTitle/" + title)
-       // console.log('esto es searchbar', title)
+        //console.log('esto es searchbar', title)
         return dispatch({
             type: 'GET_TITLE',
             payload: json.data
@@ -84,7 +84,7 @@ export function filterByDiet(payload){
  export function postRecipe(payload){
     return async function(dispatch){
     try{
-          var json = await axios.post("/recipe", payload)
+          var json = await axios.post("http://localhost:8080/Recipes/addRecipes", payload)
           return json.data
       
     }catch(error){

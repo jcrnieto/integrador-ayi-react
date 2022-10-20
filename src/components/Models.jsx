@@ -6,12 +6,12 @@ import "./models.css";
 function Models({
   image,
   title,
-  //diets,
+  diets,
   calories,
   score,
   description,
 }) {
-
+  
   //const dietsFinal= diets + ' ';
  
   return (
@@ -23,10 +23,16 @@ function Models({
           src={image ? image : imageDefault}
           alt="receta"
         />
+             <div className="detail-step-container">
+              <div className="detail-step-title">Dieta</div>
+            </div>
+            <div className="">
+              <div className="detail-step">{diets}</div>
+            </div> 
         {/* {dietsFinal?.length > 0 ? (
           <>
              <div className="detail-step-container">
-              <div className="detail-step-title">Dietas</div>
+              <div className="detail-step-title">Dieta</div>
             </div>
             <div className="">
               <div className="detail-step">{dietsFinal}</div>

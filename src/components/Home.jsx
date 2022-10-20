@@ -76,15 +76,15 @@ export default function Home(){
       <div className="cards-container">
         { recetasActuales.length > 0 ? (
           recetasActuales?.map((el) => {
-          console.log("receta",el)
+          //console.log("receta",el)
           return (
             <div className="cards-item" key={el.idRecipes}>
               <Link className="link-receta" to={"/home/" + el.idRecipes}>
                 <Cards
                   // imagen={el.imagen ? el.imagen : el.image}
-                  image={el.image}
+                  imagen={el.image? el.image : el.imagen}
                   title={el.title}
-                //   diets={el.diet ? el.diet + ' ': el.diets.map((el) => el.name + ' ')}
+                  diets={el.diets.typeOfDiet} 
                   calories= {el.calories}
                   key={el.idRecipes}
                 />

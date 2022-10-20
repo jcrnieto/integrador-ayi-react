@@ -38,9 +38,10 @@ const initialState = {
 
         case 'FILTER_BY_DIET':
             state.recipes = [...state.recipes1]
+            //console.log("reducer", state.recipes)
             // let allType = state.recipes?.filter((el)=>el.diet?  el.diet.includes(action.payload) : el.diets.find((e)=>e.name===action.payload))
-            let allType = state.recipes?.filter((el)=>el.diet?  el.diet.includes(action.payload) : el.diets.includes(action.payload));
-                 
+            let allType = state.recipes?.filter((el)=>el.diets.typeOfDiet.includes(action.payload));
+            //el.diet?  el.diet.includes(action.payload) : el.diets.includes(action.payload));
             return{
                 ...state,
                 recipes : allType
