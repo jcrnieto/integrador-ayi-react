@@ -21,7 +21,6 @@ export default function Detail() {
         <Models
           image={recipe?.image}
           title={recipe?.title}
-          //diets={recipe?.diets.typeOfDiet}
           calories={recipe?.calories}
           score={recipe?.score}
           description={recipe?.description}

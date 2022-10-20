@@ -6,7 +6,6 @@ import "./models.css";
 function Models({
   image,
   title,
-  diets,
   calories,
   score,
   description,
@@ -23,29 +22,6 @@ function Models({
           src={image ? image : imageDefault}
           alt="receta"
         />
-             <div className="detail-step-container">
-              <div className="detail-step-title">Dieta</div>
-            </div>
-            <div className="">
-              <div className="detail-step">{diets}</div>
-            </div> 
-        {/* {dietsFinal?.length > 0 ? (
-          <>
-             <div className="detail-step-container">
-              <div className="detail-step-title">Dieta</div>
-            </div>
-            <div className="">
-              <div className="detail-step">{dietsFinal}</div>
-            </div> 
-          </>
-        ) : null} */}
-        <div className="">
-          <div className="detail-step-title">Detalle</div>
-        </div>
-        {/* <div
-          className="detail-summary"
-          dangerouslySetInnerHTML={{ __html: summary }}
-        ></div> */}
         <div className="detail-score-container">
           <div className="detail-score-title">Puntuación</div>
           <div className="detail-score-title">Calorias</div>
@@ -54,8 +30,8 @@ function Models({
           <div className="detail-score">{score}</div>
           <div className="detail-score">{calories}</div>
         </div>
-        <div className="detail-step-container">
-          <div className="detail-step-title">Paso a paso</div>
+        <div className="">
+          <div className="detail-step-title">Detalle</div>
         </div>
         <div className="detail-pasoapaso">
           <div className="detail-step">{description}</div>
