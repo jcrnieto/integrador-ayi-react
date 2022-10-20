@@ -4,8 +4,8 @@ import axios from 'axios';
 export function getRecipes(){
     return async function(dispatch){
     try{
-   
-       var json = await axios.get("http://localhost:8080/Recipes/getAllRecipes");
+        //http://localhost:8080
+       var json = await axios.get("/Recipes/getAllRecipes");
        //console.log('actions', json.data)
        return dispatch({
            type: 'GET_RECIPES',
@@ -21,8 +21,8 @@ export function getRecipes(){
 export function getRecipeId(id){
     return async function(dispatch){
      try{
-   
-        var json = await axios.get(`http://localhost:8080/Recipes/getRecipesById/${id}`)
+        //http://localhost:8080
+        var json = await axios.get(`/Recipes/getRecipesById/${id}`)
         console.log("ID",json.data)
         return dispatch({
             type: 'GET_ID',
@@ -39,7 +39,8 @@ export function getRecipeId(id){
 export function getDiet(){
     return async function(dispatch){
     try{
-        var json = await axios.get("http://localhost:8080/Diets/getAllDiets")
+        //http://localhost:8080
+        var json = await axios.get("/Diets/getAllDiets")
         //console.log('types actions', json.data)
         return dispatch({
             type: 'GET_DIET',
@@ -57,7 +58,8 @@ export function getDiet(){
 export function getTitle(title){
     return async function(dispatch){
     try{
-        var json = await axios.get("http://localhost:8080/Recipes/searchRecipesByTitle/" + title)
+        //http://localhost:8080
+        var json = await axios.get("/Recipes/searchRecipesByTitle/" + title)
         //console.log('esto es searchbar', title)
         return dispatch({
             type: 'GET_TITLE',
@@ -81,10 +83,11 @@ export function filterByDiet(payload){
      }
  }
 
- export function postRecipe(payload){
+ export function postRecipe(payload, id){
     return async function(dispatch){
     try{
-          var json = await axios.post("http://localhost:8080/Recipes/addRecipes", payload)
+          //http://localhost:8080
+          var json = await axios.post(`/Recipes/addRecipes/${id}`, payload)
           return json.data
       
     }catch(error){

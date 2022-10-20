@@ -60,7 +60,7 @@ export default function Home(){
             <SearchBar /> 
            <select className='dietas' onChange={(e) => handleFilterDiet(e)}>
         {allDiets?.map((el) => (
-          <option key={el.id} value={el.typeOfDiet}>
+          <option key={el.idDiets} value={el.typeOfDiet}>
             {el.typeOfDiet}
           </option>
         ))}
@@ -81,7 +81,6 @@ export default function Home(){
             <div className="cards-item" key={el.idRecipes}>
               <Link className="link-receta" to={"/home/" + el.idRecipes}>
                 <Cards
-                  // imagen={el.imagen ? el.imagen : el.image}
                   imagen={el.image? el.image : el.imagen}
                   title={el.title}
                   diets={el.diets.typeOfDiet} 
