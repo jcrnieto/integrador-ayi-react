@@ -90,7 +90,7 @@ export default function Home(){
               </Link>
             </div>
           );
-        })): <div><h1>No se encontró receta</h1></div>}
+        })): <div className="not-found"><h1>No se encontró receta</h1></div>}
       </div>
      </div>
     </div>
