@@ -3,6 +3,7 @@ La idea de este proyecto es obtener informacion de recetas saludable para distin
 _El formulario está controlado tanto desde el front como desde el back. Desde el back solo con el @NotNull
 _El filtrado por dietas está echo desde el front por cuestiones de tiempo. Por performance se que se debe hacer desde el back. No obstante a las dietas si me las traigo del backend, y desde el front me las traigo por medio de un estado de redux
 _Hay dos rutas con excepciones, una por id y la otra por busqueda de nombre de receta. Esta ultima si colocamos un nombre que no coincide con ninguna receta en la consola nos aparece un axiosError. Dentro de ese axios error hay un data el cual nos aparece el mensaje que proviene del backend.
+-La pagina es responsive. Por favor probar en pc y en celular
 
 
 
